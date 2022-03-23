@@ -5,8 +5,9 @@ const TodoItem = ({ todo, handleRemoveTodo, handleCompleted, index }) => {
     <div className='todo-item'>
       <div>
         <input
+          checked={todo.completed ? true : false}
           type='checkbox'
-          onChange={() => handleCompleted(index)}
+          onChange={() => handleCompleted(todo.id)}
           name='todo-status'
         />
       </div>
